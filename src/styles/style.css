@@ -1,0 +1,152 @@
+:root{
+    --yellow: rgb(234 179 8);
+    --black: rgb(23 23 23);
+    --white:rgb(245 245 245);
+    --gray:rgb(64 64 64);
+    --lightgray:  rgb(163 163 163);
+    --red: rgb(220 38 38);
+    --green: rgb(22 163 74);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    box-sizing: border-box;   
+}
+body{
+    background-color: var(--black);
+}
+nav{
+    background-color: var(--yellow);
+    padding: 1.25rem;
+    font-weight: 800;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav input{
+    border: 2px solid var(--black);
+    background-color: var(--black);
+    width: auto;
+}
+main{
+    min-height: calc(100vh - 69px - 64px);
+    padding: 2rem 0;
+    width: 550px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-rows: min-content;
+    row-gap: 5rem;
+}
+.card{
+    background-color: var(--gray);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    color: var(--white);
+}
+.title{
+    font-size: larger;
+    font-weight: 800;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    width: max-content;
+}
+.character{
+    margin: .75rem 0;
+    color: var(--white);
+    text-align: right;
+}
+form{
+    display: grid;
+    gap: .5rem;
+}
+input, textarea{
+    background-color: var(--black);
+    border: 2px solid var(--yellow);
+    border-radius: 5px;
+    padding: .5rem;
+    color: var(--yellow);
+    font-weight: bold;
+    width: 100%;
+}
+input::placeholder, textarea::placeholder{
+    color: var(--lightgray);
+}
+input:focus, textarea:focus{
+    outline: var(--yellow);
+}
+textarea{
+    height: 100px;
+    resize: vertical;
+}
+button{
+    background-color: var(--yellow);
+    padding: .5rem 1.25rem;
+    border: 2px solid var(--yellow);
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+}
+button#submit:hover{
+    filter: brightness(0.8);
+}
+button#submit:active{
+    filter: brightness(1);
+}
+.catatan-list{
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    row-gap: 1.75rem;
+    grid-template-columns: 1fr 1fr;
+}
+.catatan-list-empty{
+    margin-top: 1rem;
+    border: 2px solid var(--yellow);
+    border-radius: 5px;
+    padding: 1rem;
+}
+.catatan-item{
+    color: var(--white);
+    padding: .5rem;
+    border: 2px solid var(--yellow);
+    border-radius: 5px;
+    height: calc(100% - 44px);
+}
+.catatan-item .catatan-judul{
+    color: var(--yellow);
+    font-weight: 800;
+    font-size: larger;
+}
+.catatan-item .catatan-tanggal{
+    color: var(--lightgray);
+    margin: .1rem 0 .5rem 0;
+    font-size: smaller;
+}
+.catatan-item .catatan-isi{
+   font-size: medium;
+}
+.aksi{
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .25rem;
+}
+.aksi button{
+    background-color: var(--black);
+}
+.aksi .delete{
+    border-color: var(--red);
+    color: var(--red);
+}
+.aksi .arsip{
+    border-color: var(--green);
+    color: var(--green);
+}
+.empty{
+    color: var(--white);
+    text-align: center;
+}
